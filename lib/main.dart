@@ -72,7 +72,7 @@ class SecondRoute extends StatelessWidget {
       home: const MyHomePage(title: 'The Abby and Thomas app'),
     );
   }
-}
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
