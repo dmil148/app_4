@@ -107,7 +107,7 @@ class AbbyMPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Abby M's Page")),
-          body: Column(
+      body: Column(
           children:[
           Row(
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -127,22 +127,6 @@ class AbbyMPage extends StatelessWidget {
                 Text("How many dogs do you see?",
                 style: TextStyle(fontSize: 18),                
                 )
-              ],
-            ),
-
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        labelText: 'Enter Text',
-                        border: OutlineInputBorder(),
-                      ),
-                    ),
-                  ),
-                ),
               ],
             ),
 
