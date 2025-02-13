@@ -176,6 +176,44 @@ class DylanMillerPage extends StatelessWidget {
   }
 }
 
+class RightPage extends StatelessWidget {
+  const RightPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Dog")),
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text("Here")],),
+            ],
+          )
+    );
+  }
+}
+
+class WrongPage extends StatelessWidget {
+  const WrongPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Ooops")),
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text("Here")],),
+            ],
+          )
+    );
+  }
+}
+
 class DogNumberPage extends StatelessWidget {
   const DogNumberPage({super.key});
 
