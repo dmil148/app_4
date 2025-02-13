@@ -107,9 +107,82 @@ class AbbyMPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Abby M's Page")),
-      body: const Center(
-        child: Text("This is Abby M's Page."),
-      ),
+          body: Column(
+          children:[
+          Row(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+             crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image(
+                  image:AssetImage('assets/ispy.png'),
+                  width: 400,
+                  height: 400,
+                ),
+              ],
+            ),
+          
+          Row(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text("How many dogs do you see?",
+                style: TextStyle(fontSize: 18),                
+                )
+              ],
+            ),
+
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Enter Text',
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const DogNumberPage()),
+                    );
+                  }, child: const Text("Enter")),
+              ],
+            ),
+        ]
+       )
+    );
+  }
+}
+
+class DogNumberPage extends StatelessWidget {
+  const DogNumberPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text(" ")),
+          body: Column(
+          children:[
+          Row(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text("The Correct Answer is: 12",
+                style: TextStyle(fontSize: 18),                
+                )
+              ],
+            ),
+        ]
+       )
     );
   }
 }
