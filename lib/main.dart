@@ -108,6 +108,7 @@ class AbbyMPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Abby M's Page")),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
           children:[
           Row(
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -139,7 +140,7 @@ class AbbyMPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(builder: (context) => const DogNumberPage()),
                     );
-                  }, child: const Text("Enter")),
+                  }, child: const Text("Answer")),
               ],
             ),
         ]
@@ -156,6 +157,7 @@ class DogNumberPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text(" ")),
           body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children:[
           Row(
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
