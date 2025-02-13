@@ -163,7 +163,7 @@ class DylanMillerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Dylan Miller Page")),
+      appBar: AppBar(title: const Text("Dylan Miller's Page")),
           body: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
