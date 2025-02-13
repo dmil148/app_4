@@ -114,7 +114,7 @@ class AbbyMPage extends StatelessWidget {
   }
 }
 
-// First Floor Page with Images
+// First Floor Page with Navigation Buttons
 class FirstFloorPage extends StatelessWidget {
   const FirstFloorPage({super.key});
 
@@ -128,13 +128,31 @@ class FirstFloorPage extends StatelessWidget {
           Image.asset('assets/kitchen.png', height: 200),
           const SizedBox(height: 20),
           Image.asset('assets/familyroom.png', height: 200),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const SecondFloorPage()),
+              );
+            },
+            child: const Text("Walk Upstairs"),
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text("Leave the House"),
+          ),
         ],
       ),
     );
   }
 }
 
-// Second Floor Page with Images
+// Second Floor Page with Navigation Buttons
 class SecondFloorPage extends StatelessWidget {
   const SecondFloorPage({super.key});
 
@@ -148,6 +166,13 @@ class SecondFloorPage extends StatelessWidget {
           Image.asset('assets/bedroom.png', height: 200),
           const SizedBox(height: 20),
           Image.asset('assets/bathroom.png', height: 200),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text("Walk Downstairs"),
+          ),
         ],
       ),
     );
