@@ -51,6 +51,14 @@ class IntroPage extends StatelessWidget {
               },
               child: const Text("Abby M's Page"),
             ),
+            const SizedBox(height: 20),
+            ElevatedButton(onPressed: () {
+            Navigator.push(
+              context,
+            MaterialPageRoute(builder: (context) => DylanMillerPage())
+            );
+          }, child: Text("Dylan Miller's Page")
+          ),
           ],
         ),
       ),
@@ -145,6 +153,25 @@ class AbbyMPage extends StatelessWidget {
             ),
         ]
        )
+    );
+  }
+}
+
+class DylanMillerPage extends StatelessWidget {
+  const DylanMillerPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Dylan Miller Page")),
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text("Here")],),
+            ],
+          )
     );
   }
 }
