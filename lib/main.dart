@@ -164,7 +164,14 @@ class DylanMillerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Dylan Miller Page")),
-          body: Column(children: [Text("Here")],)
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text("Here")],),
+            ],
+          )
     );
   }
 }
