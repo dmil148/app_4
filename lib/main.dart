@@ -167,9 +167,30 @@ class DylanMillerPage extends StatelessWidget {
           body: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text("Here")],),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Do you like dogs?"),
+                    const SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: ()
+                      {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder : (context) => const RightPage())
+                        );
+                      }, child: Text('Yes')),
+                      const SizedBox(height: 10),
+                      ElevatedButton(
+                      onPressed: ()
+                      {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder : (context) => const WrongPage())
+                        );
+                      }, child: Text('No'))
+                  ],
+                ),
             ],
           )
     );
@@ -182,13 +203,21 @@ class RightPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Dog")),
+      appBar: AppBar(title: const Text("Right On!")),
           body: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text("Here")],),
+                children: [
+                  Text("Here you go!"),
+                  Image(
+                  image:AssetImage('assets/puppies.png'),
+                  width: 700,
+                  height: 700,
+                ),
+                  ],
+                  ),
             ],
           )
     );
@@ -201,13 +230,21 @@ class WrongPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Ooops")),
+      appBar: AppBar(title: const Text("Ooops.")),
           body: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text("Here")],),
+                children: [
+                  Text("You're wrong!"),
+                  const SizedBox(height: 10),
+                  ElevatedButton(onPressed: ()
+                  {
+                    Navigator.pop(context);
+                  }, child: Text("Try again."))
+                  ],
+                  ),
             ],
           )
     );
