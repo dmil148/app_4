@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Intro Page (Unchanged)
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
 
@@ -57,6 +58,7 @@ class IntroPage extends StatelessWidget {
   }
 }
 
+// Thomas W's Page with Images
 class ThomasWPage extends StatelessWidget {
   const ThomasWPage({super.key});
 
@@ -64,38 +66,40 @@ class ThomasWPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Thomas W's Page")),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const FirstFloorPage()),
-                );
-              },
-              child: const Text("First Floor"),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SecondFloorPage()),
-                );
-              },
-              child: const Text("Second Floor"),
-            ),
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('assets/house.png', height: 200),
+          const SizedBox(height: 20),
+          Image.asset('assets/dog.png', height: 150),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FirstFloorPage()),
+              );
+            },
+            child: const Text("First Floor"),
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const SecondFloorPage()),
+              );
+            },
+            child: const Text("Second Floor"),
+          ),
+        ],
       ),
     );
   }
 }
 
+// Abby M's Page (Placeholder)
 class AbbyMPage extends StatelessWidget {
   const AbbyMPage({super.key});
 
@@ -110,6 +114,7 @@ class AbbyMPage extends StatelessWidget {
   }
 }
 
+// First Floor Page with Images
 class FirstFloorPage extends StatelessWidget {
   const FirstFloorPage({super.key});
 
@@ -117,13 +122,19 @@ class FirstFloorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("First Floor")),
-      body: const Center(
-        child: Text("First Floor Screen - Placeholder"),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('assets/kitchen.png', height: 200),
+          const SizedBox(height: 20),
+          Image.asset('assets/familyroom.png', height: 200),
+        ],
       ),
     );
   }
 }
 
+// Second Floor Page with Images
 class SecondFloorPage extends StatelessWidget {
   const SecondFloorPage({super.key});
 
@@ -131,13 +142,19 @@ class SecondFloorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Second Floor")),
-      body: const Center(
-        child: Text("Second Floor Screen - Placeholder"),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('assets/bedroom.png', height: 200),
+          const SizedBox(height: 20),
+          Image.asset('assets/bathroom.png', height: 200),
+        ],
       ),
     );
   }
 }
 
+// FirstRoute (Your Partner's Code)
 class FirstRoute extends StatelessWidget {
   const FirstRoute({super.key});
 
@@ -160,6 +177,7 @@ class FirstRoute extends StatelessWidget {
   }
 }
 
+// SecondRoute (Your Partner's Code)
 class SecondRoute extends StatelessWidget {
   const SecondRoute({super.key});
 
