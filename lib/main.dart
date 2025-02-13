@@ -27,7 +27,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Abby M and Thomas W's App")),
+      appBar: AppBar(title: const Text("Abby M and Thomas W and Dylan Miller's App")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
